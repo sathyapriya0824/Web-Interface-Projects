@@ -1,0 +1,25 @@
+.site-footer {
+  background: var(--ink);
+  border-top: 3px solid var(--gold);
+  margin-top: auto;
+}
+
+.site-footer__inner {
+  width: min(1080px, 92%);
+  margin: 0 auto;
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+  color: #dfe6f2;
+  font-size: 0.82rem;
+}
+
+.site-footer__tag {
+  font-family: var(--font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: var(--gold);
+}

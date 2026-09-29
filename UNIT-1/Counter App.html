@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter App</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: lightgray;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    .counter-container {
+      background-color: white;
+      width: 300px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid black;
+      border-radius: 10px;
+    }
+
+    h1 {
+      color: black;
+    }
+
+    #count {
+      font-size: 40px;
+      margin: 20px 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    #increment {
+      background-color: green;
+      color: white;
+    }
+
+    #decrement {
+      background-color: red;
+      color: white;
+    }
+
+    #reset {
+      background-color: blue;
+      color: white;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="counter-container">
+    <h1>Counter App</h1>
+
+    <div id="count">0</div>
+
+    <div class="buttons">
+      <button id="decrement">-1</button>
+      <button id="increment">+1</button>
+      <button id="reset">Reset</button>
+    </div>
+  </div>
+
+  <script>
+    let count = 0;
+
+    const countDisplay = document.getElementById("count");
+
+    function updateDisplay() {
+      countDisplay.textContent = count;
+    }
+
+    document.getElementById("increment").addEventListener("click", function () {
+      count++;
+      updateDisplay();
+    });
+
+    document.getElementById("decrement").addEventListener("click", function () {
+      count--;
+      updateDisplay();
+    });
+
+    document.getElementById("reset").addEventListener("click", function () {
+      count = 0;
+      updateDisplay();
+    });
+
+    // Optional Keyboard Support
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "+" || e.key === "=") {
+        count++;
+      } else if (e.key === "-") {
+        count--;
+      } else if (e.key === "r" || e.key === "R") {
+        count = 0;
+      }
+
+      updateDisplay();
+    });
+  </script>
+
+</body>
+</html>

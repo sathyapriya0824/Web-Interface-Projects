@@ -1,0 +1,27 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial;background:#f4f0ff}
+.page{display:flex;justify-content:center;padding:40px 15px}
+.form{background:#fff;max-width:520px;width:100%;padding:35px;
+border-radius:16px;box-shadow:0 8px 25px #0002}
+h1{color:#5b21b6;text-align:center;margin-bottom:5px}
+.note{text-align:center;color:#64748b;font-size:13px;margin-bottom:20px}
+label{display:block;margin-top:14px;margin-bottom:5px;font-weight:bold;color:#374151;font-size:14px}
+input, select, textarea{width:100%;padding:9px;border:1px solid #ddd;
+border-radius:8px;font-size:14px}
+textarea{resize:vertical;min-height:60px}
+.error{color:#ef4444;font-size:12px;display:block;margin-top:3px}
+.success{color:#16a34a;text-align:center;margin-top:15px;font-weight:bold}
+.row{display:flex;gap:10px}
+.col-small{flex:1}
+.col-large{flex:2}
+.radio-group{display:flex;gap:15px;font-weight:normal;font-size:14px}
+.checkbox-label{display:flex;align-items:center;gap:8px;font-weight:normal;
+margin-top:15px;font-size:14px}
+.checkbox-label input{width:auto}
+.fileName{display:block;font-size:12px;color:#6d28d9;margin-top:4px}
+.btnRow{display:flex;gap:12px;margin-top:25px}
+.submitBtn{flex:1;background:#5b21b6;color:#fff;border:none;padding:11px;
+border-radius:8px;cursor:pointer;font-size:15px}
+.clearBtn{flex:1;background:#e5e7eb;color:#374151;border:none;padding:11px;
+border-radius:8px;cursor:pointer;font-size:15px}
+@media(max-width:500px){.row{flex-direction:column}}

@@ -1,0 +1,116 @@
+.student-card {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 30px 26px 26px;
+  text-align: center;
+  box-shadow: 0 14px 30px -20px rgba(27, 42, 74, 0.35);
+
+  /* perforated ticket-stub edge, punched along the left side */
+  background-image: radial-gradient(circle at 0 50%, transparent 9px, var(--paper) 9.5px, transparent 10px);
+  background-repeat: repeat-y;
+  background-position: left top;
+  background-size: 100% 26px;
+}
+
+.student-card__stub {
+  position: absolute;
+  top: 18px;
+  left: -1px;
+  writing-mode: vertical-rl;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  background: var(--ink);
+  padding: 8px 4px;
+  border-radius: 0 4px 4px 0;
+}
+
+.student-card__photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 14px;
+  display: block;
+  border: 2px solid var(--gold);
+}
+
+.student-card__name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.student-card__facts {
+  text-align: left;
+  margin: 0 0 20px;
+}
+
+.student-card__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 7px 0;
+  border-bottom: 1px dashed var(--line);
+  font-size: 0.92rem;
+}
+
+.student-card__row:last-child {
+  border-bottom: none;
+}
+
+.student-card__row dt {
+  color: var(--ink-light);
+}
+
+.student-card__row dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.student-card__statuses {
+  text-align: left;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.status-line {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--ink-light);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Rubber-stamp badge for eligibility outcomes */
+.stamp {
+  align-self: flex-start;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 3px;
+  border: 2px solid currentColor;
+  transform: rotate(-2deg);
+}
+
+.stamp--ok {
+  color: var(--teal);
+}
+
+.stamp--no {
+  color: var(--rust);
+}

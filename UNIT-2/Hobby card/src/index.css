@@ -1,0 +1,77 @@
+:root {
+  /* Color tokens */
+  --ink: #1b2a4a;         /* deep navy - letterhead / footer */
+  --ink-light: #46578a;   /* softened navy for secondary text */
+  --paper: #eef1f6;       /* cool ledger-paper background */
+  --card: #ffffff;        /* card surface */
+  --gold: #c9a227;        /* rule lines / accents */
+  --teal: #1e7a63;        /* eligible / positive status */
+  --rust: #b4432f;        /* not-eligible / negative status */
+  --blue-name: #2451b0;   /* student name (required: blue) */
+  --green-cgpa: #1e8a5a;  /* CGPA (required: green) */
+  --orange-att: #d97706;  /* attendance (required: orange) */
+  --line: #d7deea;
+
+  /* Type tokens */
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "Work Sans", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--paper);
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px);
+  background-size: 100% 42px;
+  font-family: var(--font-body);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

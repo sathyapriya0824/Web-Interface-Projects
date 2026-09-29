@@ -1,0 +1,32 @@
+.subject-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 26px;
+  box-shadow: 0 14px 30px -20px rgba(27, 42, 74, 0.35);
+}
+
+.subject-card__title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: var(--ink);
+}
+
+.subject-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.subject-list__item {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  padding: 9px 16px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--gold);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink);
+}

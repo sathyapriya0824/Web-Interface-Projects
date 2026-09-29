@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6fb;
+  color: #222;
+}
+
+.navbar {
+  background: #145a32;
+  padding: 14px 24px;
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.navbar a.active,
+.navbar a:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.navbar .brand {
+  font-weight: 700;
+  font-size: 18px;
+  margin-right: 12px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 16px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 24px 28px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.login-box {
+  max-width: 380px;
+  margin: 80px auto;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #444;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.btn {
+  background: #145a32;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 16px;
+}
+
+.btn:hover {
+  background: #0e4325;
+}
+
+.btn.danger {
+  background: #d64545;
+}
+
+.btn.danger:hover {
+  background: #b83535;
+}
+
+.marks-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #e0e0e0;
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  background: #145a32;
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background: #f7f9f7;
+}
+
+.grade {
+  font-weight: 700;
+}
+
+.grade.A { color: #1b7a3d; }
+.grade.B { color: #2f7fbf; }
+.grade.C { color: #b8860b; }
+.grade.F { color: #d64545; }
+
+.error-msg {
+  color: #d64545;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.empty {
+  color: #888;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.actions button {
+  margin-right: 6px;
+}

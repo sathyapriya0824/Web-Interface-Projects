@@ -1,0 +1,358 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+
+/* Main Page */
+
+.attendance-page {
+  min-height: 100vh;
+
+  background-color: #f1f5f9;
+
+  padding: 40px 20px;
+}
+
+
+/* Container */
+
+.attendance-container {
+  max-width: 1100px;
+
+  margin: auto;
+}
+
+
+/* Header */
+
+.header {
+  background-color: white;
+
+  padding: 25px;
+
+  border-radius: 15px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 25px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.header h1 {
+  color: #1e3a8a;
+
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: #64748b;
+}
+
+
+/* Reset Button */
+
+.reset-btn {
+  padding: 11px 18px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background-color: #475569;
+
+  color: white;
+
+  font-size: 15px;
+
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: #334155;
+}
+
+
+/* Student List */
+
+.student-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+/* Student Card */
+
+.student-card {
+  background-color: white;
+
+  padding: 16px;
+
+  border-radius: 12px;
+
+  display: grid;
+
+  grid-template-columns: 45px 1fr 140px 210px;
+
+  align-items: center;
+
+  gap: 15px;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Number */
+
+.student-number {
+  width: 38px;
+
+  height: 38px;
+
+  border-radius: 50%;
+
+  background-color: #dbeafe;
+
+  color: #1d4ed8;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-weight: bold;
+}
+
+
+/* Student Information */
+
+.student-info h3 {
+  color: #1f2937;
+
+  margin-bottom: 5px;
+}
+
+.student-info p {
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+/* Status */
+
+.status {
+  text-align: center;
+}
+
+.not-marked {
+  color: #94a3b8;
+
+  font-size: 14px;
+}
+
+.present-status {
+  color: #16a34a;
+
+  font-weight: bold;
+}
+
+.absent-status {
+  color: #dc2626;
+
+  font-weight: bold;
+}
+
+
+/* Attendance Buttons */
+
+.attendance-buttons {
+  display: flex;
+
+  gap: 8px;
+}
+
+.attendance-buttons button {
+  padding: 9px 13px;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+  transition: 0.2s;
+}
+
+
+/* Present */
+
+.present {
+  border: 1px solid #22c55e;
+
+  background-color: white;
+
+  color: #16a34a;
+}
+
+.present:hover,
+.present.active {
+  background-color: #22c55e;
+
+  color: white;
+}
+
+
+/* Absent */
+
+.absent {
+  border: 1px solid #ef4444;
+
+  background-color: white;
+
+  color: #dc2626;
+}
+
+.absent:hover,
+.absent.active {
+  background-color: #ef4444;
+
+  color: white;
+}
+
+
+/* Summary */
+
+.summary {
+  margin-top: 25px;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+}
+
+
+.summary-card {
+  background-color: white;
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.summary-card span {
+  font-size: 30px;
+}
+
+.summary-card p {
+  color: #64748b;
+
+  font-size: 14px;
+
+  margin-bottom: 5px;
+}
+
+.summary-card h2 {
+  color: #1f2937;
+}
+
+.present-summary {
+  border-left: 5px solid #22c55e;
+}
+
+.absent-summary {
+  border-left: 5px solid #ef4444;
+}
+
+
+/* Message */
+
+.message {
+  background-color: white;
+
+  margin-top: 20px;
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  text-align: center;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.message h3 {
+  color: #1e3a8a;
+}
+
+
+/* Responsive */
+
+@media (max-width: 850px) {
+
+  .student-card {
+    grid-template-columns: 40px 1fr;
+  }
+
+  .status {
+    text-align: left;
+  }
+
+  .attendance-buttons {
+    grid-column: 2;
+  }
+
+  .summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 550px) {
+
+  .attendance-page {
+    padding: 20px 10px;
+  }
+
+  .header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .student-card {
+    grid-template-columns: 35px 1fr;
+  }
+
+  .summary {
+    grid-template-columns: 1fr;
+  }
+
+}

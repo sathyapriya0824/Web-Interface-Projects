@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Profile Card</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background-color: rgb(242, 205, 235);
+            text-align: center;
+        }
+
+        h1{
+            color: darkblue;
+        }
+
+        .container{
+            width: 350px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        input{
+            width: 90%;
+            padding: 8px;
+            margin: 8px;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+
+        button{
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: darkgreen;
+        }
+
+        .card{
+            width: 350px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        .card h2{
+            color: blue;
+        }
+
+        /* Student Photo */
+        .student-photo{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid blue;
+            margin-bottom: 15px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Student Profile Card</h1>
+
+    <div class="container">
+
+        <input type="text" id="name" placeholder="Enter Name"><br>
+
+        <input type="text" id="roll" placeholder="Enter Roll Number"><br>
+
+        <input type="number" id="marks" placeholder="Enter Marks"><br><br>
+
+        <button onclick="displayProfile()">
+            Display Profile
+        </button>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>Student Profile</h2>
+
+        <!-- Student Photo -->
+        <img src="sathya.png" class="student-photo" alt="Student Photo">
+
+        <p>
+            <b>Name :</b>
+            <span id="sname"></span>
+        </p>
+
+        <p>
+            <b>Roll Number :</b>
+            <span id="sroll"></span>
+        </p>
+
+        <p>
+            <b>Marks :</b>
+            <span id="smarks"></span>
+        </p>
+
+        <p>
+            <b>Grade :</b>
+            <span id="sgrade"></span>
+        </p>
+
+    </div>
+
+
+<script>
+
+function displayProfile(){
+
+    // Get input values
+
+    let name = document.getElementById("name").value;
+
+    let roll = document.getElementById("roll").value;
+
+    let marks = Number(document.getElementById("marks").value);
+
+    let grade;
+
+
+    // Grade Calculation
+
+    if(marks >= 90){
+        grade = "A";
+    }
+
+    else if(marks >= 80){
+        grade = "B";
+    }
+
+    else if(marks >= 70){
+        grade = "C";
+    }
+
+    else if(marks >= 60){
+        grade = "D";
+    }
+
+    else{
+        grade = "F";
+    }
+
+
+    // Display Student Details
+
+    document.getElementById("sname").innerHTML = name;
+
+    document.getElementById("sroll").innerHTML = roll;
+
+    document.getElementById("smarks").innerHTML = marks;
+
+    document.getElementById("sgrade").innerHTML = grade;
+
+}
+
+</script>
+
+</body>
+</html>

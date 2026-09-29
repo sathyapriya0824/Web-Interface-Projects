@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6fb;
+  color: #222;
+}
+
+.navbar {
+  background: #2f3e9e;
+  padding: 14px 24px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.navbar a.active,
+.navbar a:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.navbar .brand {
+  font-weight: 700;
+  font-size: 18px;
+  margin-right: 12px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 0 16px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-form input,
+.todo-form select {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.btn {
+  background: #2f3e9e;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background: #24307f;
+}
+
+.btn.danger {
+  background: #d64545;
+}
+
+.btn.danger:hover {
+  background: #b83535;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background: #fafafa;
+}
+
+.todo-item.done .todo-text {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.todo-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  color: #fff;
+  margin-left: 8px;
+}
+
+.badge.high {
+  background: #d64545;
+}
+.badge.medium {
+  background: #e0a020;
+}
+.badge.low {
+  background: #4caf50;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+  text-align: center;
+}
+
+.stat-box {
+  background: #f0f2fb;
+  padding: 18px;
+  border-radius: 8px;
+}
+
+.stat-box h2 {
+  margin: 0;
+  color: #2f3e9e;
+}
+
+.empty {
+  color: #888;
+  text-align: center;
+  padding: 20px 0;
+}
