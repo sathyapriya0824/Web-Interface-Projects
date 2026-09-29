@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./AuthContext";
 import { StudentProvider } from "./StudentContext";
 import Navbar from "./components/Navbar";
@@ -13,7 +13,7 @@ export default function App() {
   return (
     <AuthProvider>
       <StudentProvider>
-        <BrowserRouter>
+        <HashRouter>
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -28,7 +28,7 @@ export default function App() {
               }
             />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </StudentProvider>
     </AuthProvider>
   );
